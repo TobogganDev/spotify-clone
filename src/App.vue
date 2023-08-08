@@ -61,12 +61,61 @@ let openMenu = ref(false)
           <MenuItem class="ml-[1px]" :icon-size="23" name="Home" icon-string="home" page-url="/" />
         </RouterLink>
         <RouterLink to="/search">
-          <MenuItem class="ml-[1px]" :icon-size="23" name="Search" icon-string="search" page-url="/search" />
+          <MenuItem
+            class="ml-[1px]"
+            :icon-size="24"
+            name="Search"
+            icon-string="search"
+            page-url="/search"
+          />
         </RouterLink>
         <RouterLink to="/library">
-          <MenuItem class="ml-[1px]" :icon-size="23" name="Library" icon-string="library" page-url="/library"/>
+          <MenuItem
+            class="ml-[2px]"
+            :icon-size="23"
+            name="Library"
+            icon-string="library"
+            page-url="/library"
+          />
         </RouterLink>
+        <div class="py-3.5"></div>
+        <MenuItem
+          :icon-size="24"
+          name="Create Playliste"
+          icon-string="playlist"
+          page-url="/playlist"
+        />
+        <MenuItem
+          class="ml-[1px]"
+          :icon-size="27"
+          name="Liked Songs"
+          icon-string="liked"
+          page-url="/liked"
+        />
+      </ul>
+      <div class="border-b border-b-gray-700"></div>
+      <ul>
+        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white">
+          My Playlist #1
+        </li>
+        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white">
+          My Playlist #2
+        </li>
+        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white">
+          My Playlist #3
+        </li>
+        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white">
+          My Playlist #4
+        </li>
       </ul>
     </div>
+  </div>
+
+  <div
+    class="fixed right-0 top-0 w-[calc(100%-240px)] overflow-auto h-full bg-gradient-to-b from-[#1C1C1C] to-black"
+  >
+    <div class="mt-[70px]"></div>
+    <RouterView />
+    <div class="mb-[100px]"></div>
   </div>
 </template>
